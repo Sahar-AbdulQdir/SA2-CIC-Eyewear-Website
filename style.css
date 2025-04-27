@@ -1,0 +1,95 @@
+header{
+    margin-top: -1%;
+    margin-left: -1%;
+    margin-right: -1%;
+}
+header .navBar{
+    display: flex;
+    flex-direction: column;
+}
+
+header .navBar .banner{
+    align-items: center;
+    text-align: center;
+    background-color: #EE1C25;
+    h3{
+        font-size: 1em;
+        color: aliceblue;
+    }
+}
+
+header .navBar .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -3.6%;
+    margin-top: -1%;
+    padding-top: .3%;
+}
+
+header .navBar .nav .part1{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 2%;
+    li img{
+        width: 60px;
+        height: 60px;
+    }
+    li h3{
+        margin-top: 23px;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+}
+
+header .navBar .nav .part2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    list-style-type: none;
+    margin-top: 40px;
+    li a{
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 1em;
+
+    }
+}
+
+header .navBar .nav .part3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 2%;
+li .navButton{
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px;
+    width: 180px;
+    a{
+        text-decoration: none;
+        color: aliceblue;
+        font-size: 1em;
+        font-weight: 700;
+    }
+}
+}
+
+/* Hero part */
+.Hero{
+    background-image: url("/Images/hero.jpeg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -1%;
+    margin-left: -1%;
+    margin-right: -1%;
+}
