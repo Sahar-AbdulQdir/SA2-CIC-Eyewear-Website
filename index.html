@@ -38,7 +38,117 @@
     </header>
 
     <div class="Hero">
-
+        <div class="w">
+            <!-- Generate 50 .i elements -->
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="i"></div>
+            <div class="h">
+                <h1>See the world differently</h1>
+            </div>
+        </div>
     </div>
+
+    <section class="category">
+        <div class="image-container image1" onclick="toggleClick(this)">
+          <img src="Close-up Portrait with Glasses (1).jpeg" alt="Image 1"/>
+          <h2>Header 1</h2>
+        </div>
+      
+        <div class="image-container image2">
+          <img src="Man with Bold Sunglasses.jpeg" alt="Image 2"/>
+          <h2>Header 2</h2>
+        </div>
+      
+        <div class="image-container image3">
+          <img src="Thoughtful Man in Overalls.jpeg" alt="Image 3"/>
+          <h2>Header 3</h2>
+        </div>
+      </section>
+
+    <section class="vr_teaser">
+        <div class="right_side">
+          <div class="part1">
+            <h1>Which Glasses Suit You Best? Find Your Perfect Fit!</h1>
+            <p>
+              Not sure which glasses complement your face shape? Use our smart guide
+              to discover the best styles—whether it's cat-eye, round, or square
+              frames. Then, try them on instantly with our AR feature!
+            </p>
+          </div>
+          <div class="part2">
+            <button class="button">Try It Now</button>
+          </div>
+        </div>
+        <div class="left_side">
+            <img src="Images/vr.png" alt="">
+        </div>
+      </section>
+
+      <Section class="location">
+        <h2><i class="fa-solid fa-location-dot"></i> Find us on the map here</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.563172016388!2d55.45720797540583!3d25.385952724029508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f58461227f16d%3A0xaeefe9d2fdda39d5!2sAl%20manar%20optics!5e0!3m2!1sen!2sae!4v1746286497946!5m2!1sen!2sae" width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </Section>
+
+    <script>
+            function toggleClick(el) {
+      el.classList.toggle('clicked');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+          const container = document.querySelector('.w');
+          for (let i = 0; i < 50; i++) {
+              const div = document.createElement('div');
+              div.className = 'i';
+              container.insertBefore(div, document.querySelector('.h'));
+          }
+      });
+    </script>
 </body>
 </html>
