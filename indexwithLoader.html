@@ -11,10 +11,173 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=League+Spartan:wght@600&family=Manrope:wght@600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
+    <style>
+      /* This is the loader section styles */
+.loader {
+    position: fixed; /* Ensure loader covers the screen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent content overflow */
+    z-index: 10; /* Place above other elements */
+    background: #b45da8; /* Loader background color */
+  }
+  
+  /* This is the container for clipping the loader sections */
+  .loader-clip {
+    position: absolute; /* Allows precise placement */
+    width: 100%; /* Full width */
+    height: 33.33%; /* Divide into three equal sections */
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .loader-clip-top {
+    top: 0; /* Position at the top */
+    background: black; /* Black background for the top clip */
+  }
+  
+  .loader-clip-center {
+    top: 33.33%; /* Center position */
+    background: #b45da8; /* Matching loader background */
+  }
+  
+  .loader-clip-bottom {
+    bottom: 0; /* Position at the bottom */
+    background: black; /* Black background for the bottom clip */
+  }
+  
+  /* This is the marquee styling */
+  .marquee {
+    position: absolute; /* Allows animation positioning */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16vw; /* Responsive font size */
+    display: flex; /* Align elements in a row */
+    gap: 1em; /* Space between marquee items */
+    margin-top: -100px; /* Adjust vertical positioning */
+  }
+  
+  .loader-clip-top .marquee,
+  .loader-clip-bottom .marquee {
+    animation: marquee-left 10s linear infinite; /* Leftward scrolling animation */
+    color: white; /* Text color for top and bottom marquees */
+    font-size: 15em; /* Large font size */
+    font-family: "Agbalumo", serif; /* Custom serif font */
+    font-weight: 10; /* Set font weight */
+    font-style: normal; /* Normal font style */
+  }
+  
+  .loader-clip-center .marquee {
+    animation: marquee-right 10s linear infinite; /* Rightward scrolling animation */
+    color: rgb(0, 0, 0); /* Black text color */
+    font-size: 15em; /* Large font size */
+    font-family: "Agbalumo", serif; /* Custom serif font */
+    font-weight: 10; /* Set font weight */
+    font-style: normal; /* Normal font style */
+  }
+  
+  /* This is the marquee leftward animation */
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-100%); /* Scroll off screen */
+    }
+  }
+  
+  /* This is the marquee rightward animation */
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-100%); /* Start off screen */
+    }
+    100% {
+      transform: translateX(0); /* Scroll into view */
+    }
+  }
+  
+  /* This is the styling for the copy mark within a span */
+  span .copymark {
+    font-size: 0.3em; /* Small text size */
+    margin-top: -550px !important; /* Adjust vertical positioning */
+  }
+  
+  /* This is the base style for the fade-in effect */
+.fade-in {
+    opacity: 0;
+    transition: opacity 3s ease-in-out; /* This is for a smooth fade-in transition */
+    transform: translateX(0%); /* This is the initial position */
+    animation: none; /* No animation by default */
+  }
+  
+  /* This is the style for visible elements with fade-in and wave effect */
+  .fade-in.visible {
+    opacity: 1; /* Makes the element fully visible */
+    animation: waveEffect 2s ease-in-out 0s 1 normal forwards; /* This is the wave animation */
+  }
+  
+  /* This is the keyframes for the wave effect animation */
+  @keyframes waveEffect {
+    0% {
+      transform: translateY(0%) rotate(0deg); /* Initial position */
+    }
+    15% {
+      transform: translateY(-10px) rotate(-5deg); /* Slight upward and left rotation */
+    }
+    30% {
+      transform: translateY(10px) rotate(5deg); /* Slight downward and right rotation */
+    }
+    45% {
+      transform: translateY(-8px) rotate(-4deg); /* Smaller upward movement */
+    }
+    60% {
+      transform: translateY(6px) rotate(3deg); /* Smaller downward movement */
+    }
+    75% {
+      transform: translateY(-4px) rotate(-2deg); /* Slight upward movement */
+    }
+    100% {
+      transform: translateY(0%) rotate(0deg); /* Back to the original position */
+    }
+  }
+  
+  /* Ensures the opacity remains 1 when visible */
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <header>
+
+  <div class="loader">
+    <div class="loader-clip loader-clip-top">
+        <div class="marquee">
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+        </div>
+    </div>
+
+    <div class="loader-clip loader-clip-center">
+        <div class="marquee">
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+        </div>
+    </div>
+
+    <div class="loader-clip loader-clip-bottom">
+        <div class="marquee">
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+            <span>CreativePulse<span class="copymark">&#174;</span></span>
+        </div>
+    </div>
+</div>
+<section class="main">
+    <header class=" fade-in">
         <div class="navBar">
             <div class="banner">
                 <h3>Free shipping on all orders</h3>
@@ -334,20 +497,85 @@
           <p>Copyright © 2025 AL Manar Optics</p>
         </div>
       </footer>
-      
+    </section>
     <script>
-            function toggleClick(el) {
-      el.classList.toggle('clicked');
-    }
+      
+// Loader Entrance
+timeline.to(".loader", {
+    duration: 1.5,
+    opacity: 1,
+    ease: "power2.inOut"
+});
 
-    document.addEventListener('DOMContentLoaded', function() {
-          const container = document.querySelector('.w');
-          for (let i = 0; i < 70; i++) {
-              const div = document.createElement('div');
-              div.className = 'i';
-              container.insertBefore(div, document.querySelector('.h'));
-          }
-      });
+// Loader Animation
+timeline.to(".loader-clip-top", {
+    delay: 0.5,
+    clipPath: "inset(0 0 100% 0)",
+    duration: 2,
+    ease: "power4.inOut",
+}, "-=0.5");
+
+timeline.to(".loader-clip-bottom", {
+    delay: 0.5,
+    clipPath: "inset(100% 0 0 0)",
+    duration: 2,
+    ease: "power4.inOut",
+}, "-=2");
+
+timeline.to(".loader-clip-center", {
+    delay: 0.5,
+    clipPath: "inset(0 100% 0 0)",
+    duration: 2,
+    ease: "power4.inOut",
+}, "-=2");
+
+// Marquee Text Fade Out
+timeline.to(".marquee span", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+}, "-=2");
+
+// Loader Disappear
+timeline.to(".loader", {
+    delay: 1,
+    opacity: 0,
+    duration: 1.5,
+    ease: "power2.inOut",
+    onComplete: () => {
+        document.querySelector(".loader").style.display = "none";
+    }
+});
+
+// Content Reveal
+timeline.to(".container", {
+    opacity: 1,
+    duration: 2,
+    ease: "power2.inOut",
+}, "-=1");
+  // Select all elements with the fade-in class
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Add visible class
+            observer.unobserve(entry.target); // Stop observing after it's visible
+        }
+    });
+});
+
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- JS file -->
+    
+    <!-- GSAP linking -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/8a2ac93fe1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+     <script src="index.js"></script>
 </body>
 </html>

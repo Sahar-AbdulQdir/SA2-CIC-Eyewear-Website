@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 header{
     margin-top: -1%;
     margin-left: -1%;
@@ -8,6 +10,8 @@ header .navBar{
     display: flex;
     flex-direction: column;
 }
+
+
 
 header .navBar .banner{
     align-items: center;
@@ -108,7 +112,7 @@ font-size: 0;
     position: relative;
     z-index: 4;
     padding: 2px;
-    transition: all 2.3s ease-in-out;
+    transition: all 1.3s ease-in-out;
     background: rgba(66, 66, 66, 0.5) url('Images/blurw2.png') repeat fixed;
     background-size: cover;
     background-position: 50% 100%;
@@ -526,12 +530,12 @@ p {
 
 .text-box {
   flex: 1;
-  background: rgba(0, 0, 0, 0.03);
+  /* background: rgba(255, 255, 255, 0); */
   padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-radius: 20px; */
+  /* backdrop-filter: blur(20px); */
+  /* box-shadow: 0 0 30px rgba(0,0,0,0.05); */
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
   animation: slideLeft 1.2s ease forwards;
   opacity: 0;
 }
@@ -591,6 +595,86 @@ p {
     padding: 60px 20px;
   }
 }
+
+.image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: slideRight 1.2s ease forwards;
+  opacity: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 550px;
+}
+
+.image-container img {
+  position: absolute;
+  width: 380px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image1 {
+  top: 0;
+  left: 0;
+  transform: rotate(-2deg);
+  z-index: 1;
+}
+
+.image2 {
+  top: 310px;
+  left: -140px;
+  transform: rotate(-1deg);
+  z-index: 2;
+}
+
+.image3 {
+  top: -70px;
+  left: -120px;
+  transform: rotate(-3deg);
+  z-index: 0;
+}
+
+.image-container img:hover {
+  transform: scale(1.1) rotate(0deg);
+  box-shadow: 0 0 20px 5px #ff1d1d, 0 0 30px 10px #fff;
+  z-index: 5;
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(-80px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(80px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 360px;
+  }
+
+  .image-container img {
+    width: 180px;
+  }
+
+  .image1 { left: 0; top: 0; }
+  .image2 { left: 50px; top: 30px; }
+  .image3 { left: 100px; top: 60px; }
+}
+
  /* === New Email Subscription Section === */
  .subscription-section {
   padding: 80px 20px;
@@ -725,30 +809,30 @@ p {
     }
     
     /* First Image - Square initially */
-    .image1 {
+    .image-1 {
       width: 400px;
       height: 400px !important;
     }
     
-    .image1.clicked {
+    .image-1.clicked {
       transform: scale(1.1);
     }
     
     /* Second & Third - Rectangular to square on hover */
-    .image2,
-    .image3 {
+    .image-2,
+    .image-3 {
       width: 250px;
       height:400px !important;
       transition: all 0.5s ease-in-out;
     }
     
-    .image2:hover,
-    .image3:hover {
+    .image-2:hover,
+    .image-3:hover {
       width: 250px;
       height: 400px;
     }
     
-    .image2:hover h2, .image3:hover h2 {
+    .image-2:hover h2, .image-3:hover h2 {
           transform: rotate(270) ;
         }
     
