@@ -247,7 +247,7 @@ header .navBar .nav .part3 .navButton a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 200vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -311,7 +311,7 @@ header .navBar .nav .part3 .navButton a {
 .popup-container {
   display: flex;
   width: 850px;
-  max-width: 95%;
+  max-width: 100%;
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
