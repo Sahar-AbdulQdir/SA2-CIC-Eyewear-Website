@@ -6,18 +6,52 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=League+Spartan:wght@600&family=Manrope:wght@600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
+<!-- Loading Screen -->
+<div class="loading-screen">
+  <div class="spinner"></div>
+</div>
+
+
+
+<script>
+  window.addEventListener("load", function () {
+    const loadingScreen = document.querySelector(".loading-screen");
+    const popup = document.getElementById("popup");
+
+    // Step 1: Show loader for 5 seconds
+    setTimeout(() => {
+      loadingScreen.classList.add("hidden");
+
+      // Step 2: Remove loader from layout after fade (0.8s)
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+
+        // Step 3: Show popup AFTER loader disappears (2 more seconds later)
+        setTimeout(() => {
+          popup.style.display = "block"; // this is when popup shows
+        }, 1000); // wait 2s after loader is hidden (total = 7 seconds)
+
+      }, 500); // match CSS fade time
+
+    }, 200); // loader stays for 2 seconds
+  });
+</script>
+
+
+
+
+
+<header>
         <div class="navBar">
             <div class="banner">
-                <h3>Free shipping on all orders</h3>
+                <h3>40% off on all Frames and Sunglasses!!</h3>
             </div>
 
 
@@ -27,19 +61,62 @@
                 <li><H3>Al Manar Optics</H3></li>
             </ul>
             <ul class="part2">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Store</a></li>
-                <li><a href="">Virtual Try-On</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="filter2.html">Store</a></li>
+                <li><a href="https://github.com/Sahar-AbdulQdir/CIC-VR-Tool/blob/main/Virtual-tryon-master/public/index.html" target="_blank">Virtual Try-On</a></li>
             </ul>
             <ul class="part3">
-                <li><button class="navButton"><a href="">Reorder contact lenses</a></button></li>
-                <li><i class="fas fa-user-alt" style="font-size:20px"></i></li>
+                <li><button class="navButton"><a href="filter2.html">Shop now!</a></button></li>
                 <li><i class="fas fa-cart-plus" style="font-size:20px"></i></li>
             </ul>            
             </div>
         </div>
     </header>
+
+    <!-- Popup Start -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-container">
+    <div class="popup-image" ></div>
+
+    <div class="popup-content">
+      <button class="close-btn" onclick="document.getElementById('popup').style.display='none'">&times;</button>
+      <h2>How about 40% <br>OFF - just for you ?</h2>
+      <p>Enter your email address for exclusive deals and updates from <strong>Almanar Optics</strong>.</p>
+      
+      <input type="email" class="email-input" placeholder="Email">
+      <button class="get-code-btn">Get code</button>
+
+      <div class="features">
+        <div>
+          <img src="https://img.icons8.com/ios-filled/20/000000/return.png" alt="Returns" />
+          <span>14-Day Free Returns</span>
+        </div>
+        <div>
+          <img src="https://img.icons8.com/ios-filled/20/000000/phone.png" alt="Support" />
+          <span>24/7 Customer Service</span>
+        </div>
+      </div>
+
+      
+
+      <p class="footer-note">
+        * By subscribing, you agree to receive emails from Almanar Optics. You can unsubscribe at any time. See our Privacy Policy for more.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- Popup End -->
+
+
+<!-- chat bot link -->
+<df-messenger
+  chat-icon="https:&#x2F;&#x2F;i.imgur.com&#x2F;3EJowdA.png"
+  intent="WELCOME"
+  chat-title="AlManarOptics"
+  agent-id="25743400-2650-4b72-bb4c-3d8dcf74a02f"
+  language-code="en"
+></df-messenger>
 
     <div class="Hero">
         <div class="w">
@@ -101,65 +178,78 @@
 
     <section class="glasses">
       <div class="text-content">
-        <h1>Discover your ideal <br />eyewear style.</h1>
+        <h1>Discover your ideal eyewear style.</h1>
         <p>Discover eyewear that complements your look<br />and enhances your confidence</p>
-        <a href="#" class="btn">shop now</a>
+        <a href="filter2.html" class="btn">shop now</a>
       </div>
       <div class="image-content">
         <!-- <div class="circle"></div> -->
-        <img src="Images/glasses-11.png" alt="Eyewear Model" />
+        <img src="Images\IMG_1451.JPG" alt="Eyewear Model" />
       </div>
     </section>
+    <!-- 
+      fpoweoovri4oejfsdkl
+      wEEIFOFJCMDK;MFC
+      EFGRSEDHTFGYHGMNGFBDFZVGSDFE
+      RESTRYJDTUKFJYDTYTRHSYRFE
+      WTRYJTUKYFGUTYJFDRTHRSEG
+      FERSETRDYTUFYKJYTDTRH
+      GRSZFEADFEGRHDTRFJYTGKHYJTGRD
+      RGSFEADWFEGRHTRFJYGKUMHCYNJFTHDBZRGSFEGRHTRJYTK
+      JMHJFNTDRBGEFRTG
+      EHTRYJTKMGHNGFBDFRGFEW
+       -->
     <section class="latest-drops">
       <h2>Explore The Latest Drops</h2>
       <div class="drops-container">
         <div class="drop-card">
           <span class="tag">New In</span>
-          <img src="Images/glasses-1.jpg" alt="MIU MIU sunglasses" />
-          <h4>MIU MIU</h4>
-          <p>AED</p>
+          <img src="Images\d1.png" alt="Verra sunglasses" />
+          <h4>VERRA</h4>
+          <p>300 AED</p>
         </div>
         <div class="drop-card">
           <span class="tag">New In</span>
-          <img src="Images/glasses-2.jpg" alt="LINDA FARROW sunglasses" />
-          <h4>LINDA FARROW</h4>
-          <p>AED</p>
+          <img src="Images\d2.png" alt="Larra sunglasses" />
+          <h4>LARRA</h4>
+          <p>360 AED</p>
         </div>
         <div class="drop-card">
           <span class="tag">New In</span>
-          <img src="Images/glasses-3.jpg" alt="VALENTINO sunglasses" />
-          <h4>VALENTINO</h4>
-          <p>AED</p>
+          <img src="Images\d3.png" alt="Nova P sunglasses" />
+          <h4>NOVA P</h4>
+          <p>280AED</p>
         </div>
         <div class="drop-card">
           <span class="tag">New In</span>
-          <img src="Images/glasses-4.jpg" alt="Cartier sunglasses" />
-          <h4>Cartier</h4>
-          <p>AED</p>
+          <img src="Images\d4.png" alt="Lee's sunglasses" />
+          <h4>LEE'S</h4>
+          <p>240 AED</p>
         </div>
         <div class="drop-card">
           <span class="tag">New In</span>
-          <img src="Images/glasses-5.jpg" alt="PRADA sunglasses" />
-          <h4>PRADA</h4>
-          <p>AED</p>
+          <img src="Images\d5.png" alt="Larra sunglasses" />
+          <h4>LARRA</h4>
+          <p>380 AED</p>
         </div>
       </div>
     </section>
-
+      <h1 class="h-category">Shop By Category</h1>
     <section class="category">
+
         <div class="image-container image-1" onclick="toggleClick(this)">
           <img src="Images/Close-up Portrait with Glasses (1).jpeg" alt="Image 1"/>
-          <h2>Header 1</h2>
+          <h2>Frames</h2>
         </div>
       
         <div class="image-container image-2">
           <img src="Images/Man with Bold Sunglasses.jpeg" alt="Image 2"/>
-          <h2>Header 2</h2>
+          <h2>Sunglasses </h2>
         </div>
       
         <div class="image-container image-3">
-          <img src="Images/Thoughtful Man in Overalls.jpeg" alt="Image 3"/>
-          <h2>Header 3</h2>
+          <img src="Images/c3.jpeg" alt="Image 3"/>
+          <h2>Lenses</h2>
         </div>
       </section>
 
@@ -168,15 +258,16 @@
     <div class="marquee-content">
       <span class="brand playfair">GIORGIO ARMANI</span>
       <span class="icon">✦</span>
-      <span class="brand spartan">PRADA</span>
+      <span class="brand spartan">Gucci</span>
       <span class="icon">✦</span>
-      <span class="brand manrope">BURBERRY</span>
+      <span class="brand manrope">Guess</span>
       <span class="icon">✦</span>
-      <span class="brand playfair">GIORGIO ARMANI</span>
+      <span class="brand playfair">Police</span>
       <span class="icon">✦</span>
-      <span class="brand spartan">PRADA</span>
+      <span class="brand spartan">Despada</span>
       <span class="icon">✦</span>
-      <span class="brand manrope">BURBERRY</span>
+      <span class="brand manrope">Carrera
+</span>
       <span class="icon">✦</span>
     </div>
   </div>
@@ -187,17 +278,17 @@
   <!-- Marquee 2 (reverse direction) -->
   <div class="marquee-wrapper reverse">
     <div class="marquee-content">
-      <span class="brand playfair">VERSACE</span>
+      <span class="brand playfair">Bella</span>
       <span class="icon">✦</span>
-      <span class="brand spartan">DOLCE & GABBANA</span>
-      <span class="icon">✦</span>
-      <span class="brand manrope">EMPORIO ARMANI</span>
-      <span class="icon">✦</span>
-      <span class="brand playfair">VERSACE</span>
-      <span class="icon">✦</span>
-      <span class="brand spartan">DOLCE & GABBANA</span>
+      <span class="brand spartan">Amara</span>
       <span class="icon">✦</span>
       <span class="brand manrope">EMPORIO ARMANI</span>
+      <span class="icon">✦</span>
+      <span class="brand playfair">VERSACE</span>
+      <span class="icon">✦</span>
+      <span class="brand spartan">Color vision</span>
+      <span class="icon">✦</span>
+      <span class="brand manrope">Gucci</span>
       <span class="icon">✦</span>
       
     </div>
@@ -221,59 +312,75 @@
             <img src="Images/vr.png" alt="">
         </div>
       </section>
-
-      <section class="latest-drops">
-        <h2>Explore The Latest Drops</h2>
+<!-- 
+      fpoweoovri4oejfsdkl
+      wEEIFOFJCMDK;MFC
+      EFGRSEDHTFGYHGMNGFBDFZVGSDFE
+      RESTRYJDTUKFJYDTYTRHSYRFE
+      WTRYJTUKYFGUTYJFDRTHRSEG
+      FERSETRDYTUFYKJYTDTRH
+      GRSZFEADFEGRHDTRFJYTGKHYJTGRD
+      RGSFEADWFEGRHTRFJYGKUMHCYNJFTHDBZRGSFEGRHTRJYTK
+      JMHJFNTDRBGEFRTG
+      EHTRYJTKMGHNGFBDFRGFEW
+       -->
+      <section class="latest-drops"> 
+        <h2>Own that 70's inspired look</h2>
         <div class="drops-container">
           <div class="drop-card">
             <span class="tag">New In</span>
-            <img src="Images/glasses-1.jpg" alt="MIU MIU sunglasses" />
-            <h4>MIU MIU</h4>
-            <p>AED</p>
+            <img src="Images/d6.png" alt="Larra sunglasses" />
+            <h4>LARRA</h4>
+                      <p>380 AED</p>
+            
           </div>
           <div class="drop-card">
             <span class="tag">New In</span>
-            <img src="Images/glasses-2.jpg" alt="LINDA FARROW sunglasses" />
-            <h4>LINDA FARROW</h4>
-            <p>AED</p>
+            <img src="Images/d7.png" alt="John Peter sunglasses" />
+            <h4>JOHN PETER</h4>
+                      <p>320 AED</p>
+            
           </div>
           <div class="drop-card">
             <span class="tag">New In</span>
-            <img src="Images/glasses-3.jpg" alt="VALENTINO sunglasses" />
-            <h4>VALENTINO</h4>
-            <p>AED</p>
+            <img src="Images/d8.png" alt="DESPADA sunglasses" />
+            <h4>DESPADA</h4>
+                      <p>390 AED</p>
+            
           </div>
           <div class="drop-card">
             <span class="tag">New In</span>
-            <img src="Images/glasses-4.jpg" alt="Cartier sunglasses" />
-            <h4>Cartier</h4>
-            <p>AED</p>
+            <img src="Images/d9.png" alt="CHARLIE DUKE sunglasses" />
+            <h4>CHARLIE DUKE</h4>
+                      <p>250 AED</p>
+            
           </div>
           <div class="drop-card">
             <span class="tag">New In</span>
-            <img src="Images/glasses-5.jpg" alt="PRADA sunglasses" />
-            <h4>PRADA</h4>
-            <p>AED</p>
+            <img src="Images/d10.png" alt="orgio premieraglasses" />
+            <h4>JORGIO PREMIERA </h4>
+                      <p>360 AED</p>
+            
           </div>
         </div>
       </section>
 
        <!-- About Section -->
-  <section class="about-section">
+  <section class="about-section" id="about-section">
     <div class="text-box">
       <h3>A bit</h3>
       <h1>About Us</h1>
       <p>
         We are a forward-thinking team of creatives and developers with a passion for elegant design and powerful storytelling. Our mission is to blend innovation with aesthetics and create unforgettable digital experiences.
       </p>
-      <button>Explore More</button>
+      <button><a class="link" href="https://www.instagram.com/almanaroptics/">Explore More</a></button>
     </div>
 
     <div class="image-box">
       <div class="image-container">
-        <img src="Images/glasses-11.png" class="image1" alt="Image 1">
-        <img src="Images/glasses-12.png" class="image2" alt="Image 2">
-        <img src="Images/glasses-16.png" class="image3" alt="Image 3">
+        <img src="Images\IMG_1459.JPG" class="image2" alt="Image 1">
+        <img src="Images\IMG_1451.JPG" class="image3" alt="Image 2">
+        <img src="Images\IMG_1452.JPG" class="image1" alt="Image 3">
       </div>
     </div>
     
@@ -282,60 +389,127 @@
   <section class="subscription-section">
     <h2>See our latest collections & exclusive offers before the crowd!</h2>
     <div class="email-input-container">
-      <input type="email" placeholder="Enter your email" />
+      <input type="email" placeholder=" Enter your email" />
     </div>
-    <p class="disclaimer">
-      By subscribing, I confirm that I am over 16 years of age and agree that my personal data can be used by Luxottica Group S.p.A to send me news, special offers, and other marketing communication as part of the Eyebuydirect Loyalty Program.
-      For more information, see our <a href="#">Notice of Financial Incentives</a>, <a href="#">Terms & Conditions</a>, and <a href="#">Privacy Policy</a>.
-    </p>
+<p class="disclaimer">
+  Write your email so we can send you our latest news, exclusive deals, and special offers straight to your inbox. 
+  Stay updated and never miss out on what’s new from us!
+  By subscribing, you confirm you're over 16 and agree to receive occasional promotional emails from our team.
+  
+</p>
+
   </section>
   
       <Section class="location">
-        <h2><i class="fa-solid fa-location-dot"></i> Find us on the map here</h2>
+        <h2><i class="fa-solid fa-location-dot"></i> Find us on the map</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3604.563172016388!2d55.45720797540583!3d25.385952724029508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f58461227f16d%3A0xaeefe9d2fdda39d5!2sAl%20manar%20optics!5e0!3m2!1sen!2sae!4v1746286497946!5m2!1sen!2sae" width="1050" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </Section>
 
     
- <section class="product-showcase">
-  <div class="top-image">
-    <img src="Images/lenses-1.jpg" alt="Optical Lenses">
+<section class="product-showcase">
+  <div class="showcase-header">
+    <h2>Premium Vision Solutions</h2>
+    <p class="subtitle">Experience crystal-clear vision with our advanced lens technology</p>
   </div>
+  
+  <div class="top-image">
+    <img src="Images/lenses-1.jpg" alt="Optical Lenses" class="zoom-hover">
+    <div class="image-overlay">
+      <h3>Optical Excellence</h3>
+      <p>Precision-crafted for perfect vision</p>
+      <button class="cta-button">Learn More</button>
+    </div>
+  </div>
+  
   <div class="bottom-images">
-    <img src="Images/lenses-2.jpg" alt="Contact Lens Look 1">
-    <img src="Images/lenses-3.jpg" alt="Contact Lens Look 2">
+    <div class="image-card">
+      <img src="Images/lenses-2.jpg" alt="Contact Lens Look 1" class="tilt-hover">
+      <div class="card-content">
+        <h4>Daily Comfort</h4>
+        <p>Breathable materials for all-day wear</p>
+        <button class="secondary-button">View Options</button>
+      </div>
+    </div>
+    
+    <div class="image-card">
+      <img src="Images/lenses-3.jpg" alt="Contact Lens Look 2" class="tilt-hover">
+      <div class="card-content">
+        <h4>Color Varieties</h4>
+        <p>Enhance or transform your eye color</p>
+        <button class="secondary-button">Explore Colors</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="features-bar" id="features-bar">
+    <div class="feature">
+      <i class="icon"><i class="fa-solid fa-glasses"></i></i>
+      <span>Anti-Glare Coating</span>
+    </div>
+    <div class="feature">
+      <i class="icon">⛊</i>
+      <span>UV Protection</span>
+    </div>
+    <div class="feature">
+      <i class="icon"><i class="fa-solid fa-droplet"></i></i>
+      <span>Moisture Lock</span>
+    </div>
+    <div class="feature">
+      <i class="icon"><i class="fa-solid fa-hourglass-start"></i></i>
+      <span>Long-Lasting</span>
+    </div>
   </div>
 </section>
+      
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="Images\ManarLogo-.png" alt="Al Manar Optics Logo">
+      <h2><span>AL MANAR</span><br>Optics</h2>
+    </div>
 
-      
-    <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-logo">
-            <img src="Images/ManarLogo.png" alt="Al Manar Optics Logo">
-            <h2><span>AL MANAR</span><br>Optics</h2>
-          </div>
-          <div class="footer-nav">
-            <h3>Navigation</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">About Us</a></li>
-              <li><a href="index.html">Our Services</a></li>
-              <li><a href="index.html">Our Team</a></li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <p>Our Support and Sales team<br>is available 24/7 to answer<br>your queries</p>
-            <p>📍 </p>
-            <p>📞 06 741 1030</p>
-            <p>✉️ AlManaroptics@gmail.com</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>Copyright © 2025 AL Manar Optics</p>
-        </div>
-      </footer>
-      
+    <div class="footer-nav">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about-section">About Us</a></li>
+        <li><a href="#features-bar">Our Services</a></li>
+
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i> Al Manar Optics, Ajman, UAE</p>
+      <p><i class="fa fa-phone" aria-hidden="true"></i> 06 741 1030</p>
+      <p>
+        <a class="Menmail" href="mailto:AlManaroptics@gmail.com">
+          <i class="fa fa-envelope" aria-hidden="true"></i> AlManaroptics@gmail.com
+        </a>
+      </p>
+      <div class="footer-icons">
+        <a href="https://wa.me/971567891234" target="_blank" title="WhatsApp">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com/almanaroptics" target="_blank" title="Instagram">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:AlManaroptics@gmail.com" title="Email">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 AL Manar Optics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <script>
+
+
             function toggleClick(el) {
       el.classList.toggle('clicked');
     }
