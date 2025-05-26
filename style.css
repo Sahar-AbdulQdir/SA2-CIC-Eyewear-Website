@@ -338,7 +338,7 @@ header .navBar .nav .part3 .navButton a {
 
 .popup-image {
   flex: 1;
-  background: url('images/popupp.jpg') center/cover no-repeat;
+  background: url('Images/popupp.jpg') center/cover no-repeat;
   min-height: 400px;
 }
 
@@ -452,7 +452,7 @@ header .navBar .nav .part3 .navButton a {
   height: 700px;
   position: relative;
   overflow: hidden;
-  background: rgba(66, 66, 66, 0.5) url('Images/w-2.avif') no-repeat center bottom;
+  background: rgba(66, 66, 66, 0.5) url('Images\w-2.avif') no-repeat center bottom;
   background-size: cover;
   font-size: 0;
   display: flex;
